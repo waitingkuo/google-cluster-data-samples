@@ -12,6 +12,7 @@ gs://clusterdata-2011-2/task_usage/
 mkdir -p samples
 cd samples
 
+gsutil cp gs://clusterdata-2011-2/schema.csv .
 for DIR in ${DIRS[@]};
 do
   FILENAME=`gsutil ls $DIR | head -n 1`
